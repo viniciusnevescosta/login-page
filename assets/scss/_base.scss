@@ -2,6 +2,14 @@
 $font1: 'Merriweather', serif;
 $font2: 'Lato', sans-serif;
 
+$cor1: #04C35C;
+$cor2: #03A850;
+$cor3: #1A202C;
+$cor4: #212938;
+$cor5: #2B6CB0;
+$cor6: #04CF63;
+$cor7: #014220;
+
 // mixins
 @mixin flex($var1, $var2) {
     flex: 1 1 $var1;
@@ -13,7 +21,7 @@ $font2: 'Lato', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20rem;
+    width: 100%;
     height: 3rem;
     border-radius: 0.6rem;
     border: 1px solid #E8E8E8;
@@ -24,6 +32,12 @@ $font2: 'Lato', sans-serif;
 
 // imports
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&display=swap');
+
+// selection
+::selection {
+    color: $cor6;
+    background: $cor7;
+}
 
 // reset html
 * {
@@ -39,12 +53,12 @@ html {
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-family: $font1;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: $font1;
 }
 
@@ -53,30 +67,6 @@ p {
 }
 
 a {
-    color: #2B6CB0;
+    color: $cor5;
     text-decoration: none;
-}
-
-form {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    font-family: $font2;
-    gap: 0.5rem;
-}
-
-span {
-    font-size: 1rem;
-}
-
-input[type="radio"] {
-    border: 1px solid #E8E8E8;
-    color: #F7FAFC;
-}
-
-button {
-    @include button();
-    font-size: 1rem;
-    color: white;
 }

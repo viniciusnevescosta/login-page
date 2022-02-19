@@ -1,13 +1,66 @@
+// html
+button {
+    @include button();
+    font-size: 1rem;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: $font2;
+    gap: 0.5rem;
+}
+
+span {
+    font-size: 1rem;
+}
+
 // classes
 .content {
     @include flex(auto, column);
     justify-content: center;
     align-items: center;
     max-width: 50%;
+
+    @include smMobile {
+        max-width: unset;
+        padding: 1rem;
+    }
+
+    @include mobile {
+        max-width: unset;
+        padding: 1rem;
+    }
+
+    @include tablet {
+        max-width: unset;
+        padding: 1rem;
+    }
+}
+
+.content-login {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column wrap;
 }
 
 .back {
     background-color: #F7FAFC;
+
+    @include smMobile {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
 }
 
 .title {
@@ -15,6 +68,14 @@
     flex-flow: column wrap;
     gap: 1rem;
     margin-bottom: 2.5rem;
+
+    @include smMobile {
+        margin-bottom: 2rem;
+    }
+
+    @include mobile {
+        margin-bottom: 2rem;
+    }
 }
 
 .input {
@@ -24,6 +85,7 @@
 
     input {
         @include button();
+        min-width: 20rem;
     
         &:hover {
             outline: none;
@@ -38,6 +100,18 @@
             color: #CFCFCF;
             font-size: 0.8rem;
         }
+
+        &:last-child {
+            margin-bottom: 1rem;
+        }
+
+        @include smMobile {
+            min-width: unset;
+        }
+
+        @include mobile {
+            min-width: 18rem !important;
+        }
     }
 }
 
@@ -45,6 +119,28 @@
     @include flex(auto, row);
     gap: 3rem;
     margin-bottom: 1rem;
+}
+
+.links-imp {
+    @include mobile {
+        label, a {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.mid {
+    justify-content: end;
+}
+
+.bottom {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+
+    @include smMobile {
+        text-align: center;
+    }
 }
 
 // id's
@@ -56,19 +152,19 @@
 }
 
 #enter {
-    background-color: #04C35C;
+    background-color: $cor1;
 
     &:hover {
-        background-color: #03A850;
+        background-color: $cor2;
         cursor: pointer;
     }
 }
 
 #google {
-    background-color: #1A202C;
+    background-color: $cor3;
 
     &:hover {
-        background-color: #212938;
+        background-color: $cor4;
         cursor: pointer;
     }
 }
