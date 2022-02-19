@@ -1,0 +1,74 @@
+// classes
+.content {
+    @include flex(auto, column);
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+.back {
+    background-color: #F7FAFC;
+}
+
+.title {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.input {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+
+    input {
+        @include button();
+    
+        &:hover {
+            outline: none;
+            background-color: #F7FAFC;
+        }
+    
+        &:active {
+            outline: none;
+        }
+    
+        &::placeholder {
+            color: #CFCFCF;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.links {
+    @include flex(auto, row);
+    gap: 3rem;
+    margin-bottom: 1rem;
+}
+
+// id's
+#img {
+    background-image: url(/assets/img/about.svg);
+    background-repeat: no-repeat;
+    background-size: 20vw;
+    background-position: center;
+}
+
+#enter {
+    background-color: #04C35C;
+
+    &:hover {
+        background-color: #03A850;
+        cursor: pointer;
+    }
+}
+
+#google {
+    background-color: #1A202C;
+
+    &:hover {
+        background-color: #212938;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,82 @@
+// variables
+$font1: 'Merriweather', serif;
+$font2: 'Lato', sans-serif;
+
+// mixins
+@mixin flex($var1, $var2) {
+    flex: 1 1 $var1;
+    display: flex;
+    flex-flow: $var2 wrap;
+}
+
+@mixin button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    height: 3rem;
+    border-radius: 0.6rem;
+    border: 1px solid #E8E8E8;
+    padding: 1rem;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+}
+
+// imports
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&display=swap');
+
+// reset html
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    flex-flow: column wrap;
+    font-display: swap;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-family: $font1;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-family: $font1;
+}
+
+p {
+    font-family: $font2;
+}
+
+a {
+    color: #2B6CB0;
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: $font2;
+    gap: 0.5rem;
+}
+
+span {
+    font-size: 1rem;
+}
+
+input[type="radio"] {
+    border: 1px solid #E8E8E8;
+    color: #F7FAFC;
+}
+
+button {
+    @include button();
+    font-size: 1rem;
+    color: white;
+}
