@@ -9,7 +9,7 @@ Codelândia: This is a page that follows the theme of a modern login layout. In 
 
 Here is the deploy [link](https://desafio4-login.vercel.app/).
 
-### 🔖 Layout
+### 🎨 Layout
 Here is the design [link](https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO/Desafios---Codel%C3%A2ndia?node-id=4588%3A99) for that project.
 
 ### 📝 License
