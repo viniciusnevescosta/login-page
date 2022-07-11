@@ -1,5 +1,9 @@
 # desafio4-login
 
+<p align="center">
+  <img height="400em" src="assets/to_readme/cover.png"
+</p>
+
 ### 🚀 Technologies
 - HTML5
 - SASS
